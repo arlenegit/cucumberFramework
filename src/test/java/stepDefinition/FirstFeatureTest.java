@@ -5,6 +5,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
+import pageActions.GoogleResultsPage;
 import pageActions.GoogleSearchPage;
 
 /**
@@ -12,10 +13,15 @@ import pageActions.GoogleSearchPage;
  */
 public class FirstFeatureTest {
 
+    private WebDriver _driver;
     private GoogleSearchPage _googleSearchPage;
+    private GoogleResultsPage _googleResultsPage;
 
     public FirstFeatureTest(){
-        _googleSearchPage = new GoogleSearchPage();
+        _driver=DriverFactory.getDriver();
+        _googleSearchPage = new GoogleSearchPage(_driver);
+        _googleResultsPage = new GoogleResultsPage(_driver);
+
 
     }
 
@@ -31,6 +37,6 @@ public class FirstFeatureTest {
 
     @Then("^I should see some results$")
     public void i_should_see_some_results() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
+        _googleResultsPage.countResults();
     }
 }

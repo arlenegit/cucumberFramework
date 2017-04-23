@@ -10,6 +10,11 @@
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <!--<dependency>-->
+            <!--<groupId>net.serenity-bdd.maven.plugins</groupId>-->
+            <!--<artifactId>serenity-maven-plugin</artifactId>-->
+            <!--<version>1.0.6</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -34,6 +39,8 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/net.serenity-bdd.maven.plugins/serenity-maven-plugin -->
+
     </dependencies>
 
 </project>

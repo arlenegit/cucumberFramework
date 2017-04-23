@@ -10,13 +10,12 @@ public class BasePageActions {
     protected WebDriver driver;
 
 
-//    BasePageActions (WebDriver driver){
-//        this.driver = driver;
-//    }
 
     BasePageActions(){
         driver = DriverFactory.getDriver();
     }
 
-
+    BasePageActions(WebDriver d){
+        this.driver = d;
+    }
 }

@@ -11,17 +11,16 @@ public class DriverFactory {
 
 
     public static WebDriver getDriver(){
-        return getChromeDriver();
+        return getFirefoxDriver();
         //getDriverFromConfiguration();
     }
 
-    public static WebDriver getChromeDriver(){
-        System.setProperty("webdriver.chrome.driver", "/Users/romil/IdeaProjects/cucumberFramework/src/test/resource/chromedriver");
+    private static WebDriver getChromeDriver(){
+        System.setProperty("webdriver.chrome.driver", "src/test/resource/chromedriver.exe");
         return new ChromeDriver();
     }
 
-    public static WebDriver getFirefoxDriver(){
-
+    private static WebDriver getFirefoxDriver(){
         return new FirefoxDriver();
     }
 }

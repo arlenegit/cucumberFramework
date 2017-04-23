@@ -12,6 +12,7 @@ import cucumber.api.junit.Cucumber;
         features = "src/test/feature"
         ,glue={"stepDefinition"}
         , tags = {"@test"}
+        ,format = {"pretty", "html:target/Reports"}
 )
 
 public class TestRunner {
